@@ -25,7 +25,7 @@ for i in range(1,21):
 
 
     url = 'http://apis.data.go.kr/B552584/EvCharger/getChargerInfo'
-    params ={'serviceKey' : 'uq85vB0CVxMjRW8l/pz9IpBuoHGnXu5kw2tDlcjZZ7p8FI4eKWy85qTNK2rcfISJRZQFVabvDSEq3iEhe4cOFQ==',
+    params ={'serviceKey' : '서비스키 입력하기',
             'pageNo' : {i},
             'numOfRows' : '9200',
             'period' : '5'}
