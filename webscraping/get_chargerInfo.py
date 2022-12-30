@@ -6,24 +6,46 @@ import time
 import pandas as pd
 
 
-conn= sqlite3.connect("/Users/damon/Documents/codestate_project/project6/Data.db")
+conn= sqlite3.connect("/Users/damon/Documents/codestate_project/project6/DB.db")
 cur = conn.cursor()
 
 cur.execute("DROP TABLE IF EXISTS chargers;")
 
 #데이터 저장할 테이블 생성
 cur.execute("""CREATE TABLE chargers (
-   statNm VARCHAR,
-   chgerType INTEGER ,
-   addr VARCHAR,
-   lat VARCHAR,
-   lng VARCHAR,
-   useTime VARCHAR,
-   busiCall INTEGER );""")
+    statId VARCHAR,
+    statNm VARCHAR,
+    chgerId VARCHAR,
+    chgerType INTEGER,
+    addr VARCHAR,
+    location VARCHAR,
+    lat VARCHAR,
+    lng VARCHAR,
+    useTime VARCHAR,
+    busiId VARCHAR,
+    bnm VARCHAR,
+    busiNm VARCHAR,
+    busiCall INTEGER,
+    stat INTEGER,
+    statUpdDt INTEGER,
+    lastTsdt INTEGER,
+    lastTedt INTEGER,
+    nowTsdt INTEGER,
+    powerType VARCHAR,
+    output INTEGER,
+    method VARCHAR,
+    zcode INTEGER,
+    zscode INTEGER,
+    kind VARCHAR,
+    kindDetail VARCHAR,
+    parkingFree VARCHAR,
+    note VARCHAR,
+    limitYn VARCHAR,
+    limitDetail VARCHAR,
+    delYn VARCHAR,
+    delDetail VARCHAR);""")
 
 for i in range(1,21):
-
-
     url = 'http://apis.data.go.kr/B552584/EvCharger/getChargerInfo'
     params ={'serviceKey' : 'uq85vB0CVxMjRW8l/pz9IpBuoHGnXu5kw2tDlcjZZ7p8FI4eKWy85qTNK2rcfISJRZQFVabvDSEq3iEhe4cOFQ==',
             'pageNo' : {i},
@@ -52,10 +74,9 @@ for i in range(1,21):
             columnList.append(eachColumn)
         rowList.append(columnList)
         columnList = []    # 다음 row의 값을 넣기 위해 비워준다. (매우 중요!!)
-        
+    
     result = pd.DataFrame(rowList, columns=nameList)
-    nameList = ['statNm', 'chgerType', 'addr', 'lat', 'lng', 'useTime','busiCall']
-    result = result[nameList]
+    result = result.drop_duplicates()
 
     #데이터 베이스에 저장
     result.to_sql(name='chargers', con=conn, if_exists='append',index=False)  

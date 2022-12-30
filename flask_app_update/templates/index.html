@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>전기차 충전소 추천</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/mdb.min.css')}}" />
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+      
+      .carousel-item:nth-child(1) {
+        background-image: url('https://images.roa.ai/articles/2021/01/volta.png');
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center center; 
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('https://images.roa.ai/articles/2018/09/WF_tustin_Volta_cropped.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('http://newsroom.etomato.com/userfiles/%EC%82%AC%EB%B3%B8%20-2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" target="_blank" href="/">
+          <strong>F.E.C</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#intro">Find Electric Charger</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons -->
+            <li class="">
+              <a class="nav-link" href="https://tumblbug.com/collections/youtubecreators" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="">
+              <a class="nav-link" href="https://www.facebook.com/tumblbug" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/tumblbug" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/tumblbug/" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">전기차 충전소 추천 시스템</h1>
+                <br>
+                <h5 class="mb-4">출발지를 입력하여 10km안에
+                  전기차 충전소의 정보를 확인할 수 있습니다.</h5>
+                <a class="btn btn-outline-light btn-lg m-2" href="https://www.socar.kr/"
+                  role="button" rel="nofollow" target="_blank">쏘카</a>
+                <a class="btn btn-outline-light btn-lg m-2" href="https://m.greencar.co.kr/index.do"
+                  target="_blank" role="button">그린카</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>전기차 충전소 추천 시스템 사용 방법</h2>
+                <br>
+                <h4>1. 출발지 정보를 입력하고 상세 정보를 설정합니다.</h4>
+                <br>
+                <h4>2. 지도를 통해 출발지에서 가까운 충전소의 정보와 영업유무를 확인하세요.</h4>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1>세계 전기차 시장 현황 보고 및 전망을 확인하세요.</h1>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="http://www.keei.re.kr/web_energy_new/insight.nsf/0/0AD6AECC08DF7BDA4925870D00298CAF/$File/%5B21-14-%ED%98%84%EC%95%88%5D%20IEA%EC%9D%98%20%EC%84%B8%EA%B3%84%20%EC%A0%84%EA%B8%B0%EC%B0%A8%20%EC%8B%9C%EC%9E%A5%20%ED%98%84%ED%99%A9%20%EB%B3%B4%EA%B3%A0%20%EB%B0%8F%20%EC%A0%84%EB%A7%9D.pdf" target="_blank" role="button">논문 읽어보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="yellow">
+              <img src="https://cdn.mkyu.co.kr/goods_thumbnail/d480abc3-0bde-4138-aa06-61a6e5912bdb.jpg" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(118, 218, 87, 0.582);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>세계기후와 전기차</strong></h4>
+            <p class="text-muted">
+              다양한 국가들은 탄소중립을 위해 내연기관차 퇴출에 나서고 있습니다. 입법을 통해 내연기관차 판매를 전면 금지하겠다는 계획을 발표 중입니다. 노르웨이는 2025년, 영국이 2035년, 프랑스가 2040년을 목표로 내연기관차 종말을 선언했습니다. 최근 서울시도 2035년에 휘발유·경유차 등 내연기관차의 등록을 불허하고 전기차·수소전기차만 등록하겠다는 전략을 발표했습니다. 
+            </p>
+            <a class="btn btn-outline-light btn-lg m-2" href="https://www.ajunews.com/view/20210616051538795"
+                  role="button" rel="nofollow" style="background-color: rgba(68, 214, 190, 0.582)" _blank">읽어보기</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="mb-5">
+        <h4 class="mb-5 text-center"><strong>F.E.C 테스트 해보기</strong></h4>
+
+        <h5 class="mb-5 text-center"><strong>출발지 찾기</strong></h5>
+        <h6 class="mb-5 text-center">주소를 입력하여 출발지를 설정합니다. </h6>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <form method="POST" action = "/select">
+              <div class="row mb-6">
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" name="address" class="form-control" />
+                    <label class="form-label" for="address">주소명</label>
+                  </div>
+                </div>
+              </div>        
+        <h5 class="mb-5 text-center"></h5>
+
+        <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4" style="background-color: rgba(68, 214, 190, 0.582)">
+        검색하기
+      </button>
+
+              <!-- Register buttons -->
+
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <hr class="m-0" />
+
+    <div class="text-center py-4 align-items-center">
+      <p>Follow SoGreencar on social media</p>
+      <a href="https://tumblbug.com/collections/youtubecreators" class="btn btn-primary m-1" role="button"
+        rel="nofollow" style="background-color: rgba(68, 214, 190, 0.582)" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com/tumblbug" class="btn btn-primary m-1" style="background-color: rgba(68, 214, 190, 0.582)" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/tumblbug" class="btn btn-primary m-1" style="background-color: rgba(68, 214, 190, 0.582)" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/tumblbug/" class="btn btn-primary m-1" role="button"style="background-color: rgba(68, 214, 190, 0.582)" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-dark" >SoGreencar/thogood212.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="{{url_for('static', filename = '/js/mdb.min.js')}}"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="{{url_for('static', filename = '/js/script.js')}}"></script>
+</body>
+</html>

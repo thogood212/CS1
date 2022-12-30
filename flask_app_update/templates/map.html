@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bb81f955d9ea4d10b3f6d4ca9a31016a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bb81f955d9ea4d10b3f6d4ca9a31016a" ></div>
+        
+</body>
+<script>    
+    
+            var map_bb81f955d9ea4d10b3f6d4ca9a31016a = L.map(
+                "map_bb81f955d9ea4d10b3f6d4ca9a31016a",
+                {
+                    center: [37.2601424748801, 126.963891446527],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1294366b151a46d9b60b9c1200aa058c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bb81f955d9ea4d10b3f6d4ca9a31016a);
+        
+    
+            var marker_cluster_d1fee4044fae4953b959d39476e21e61 = L.markerClusterGroup(
+                {"maxClusterRadius": 10}
+            );
+            map_bb81f955d9ea4d10b3f6d4ca9a31016a.addLayer(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var marker_5a433aa255b740f09a7bad56d7ed454b = L.marker(
+                [37.2601424748801, 126.963891446527],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var icon_c3ed75503aa24a8497a5997e34651d34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5a433aa255b740f09a7bad56d7ed454b.setIcon(icon_c3ed75503aa24a8497a5997e34651d34);
+        
+    
+            marker_5a433aa255b740f09a7bad56d7ed454b.bindTooltip(
+                `<div>
+                     출발지
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79c9d00d3bc547659421ff675425c153 = L.marker(
+                [37.260131, 126.961909],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_0c930618c67c432e9f4ec1342be58f6f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "#00ABDC"}
+            )
+            marker_79c9d00d3bc547659421ff675425c153.setIcon(beautify_icon_0c930618c67c432e9f4ec1342be58f6f);
+        
+    
+            marker_79c9d00d3bc547659421ff675425c153.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">1.호매실스위첸</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.168km</br>예상 소요 시간 :0분37초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 7개</br>AC완속 : 7개</br>주소 :경기도 수원시 권선구 호매실로166번길 63 (호매실동, 호매실스위첸 능실마을19단지) 1905동 지하 1층</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d395b2ca130f4b2f884c11d89d089519 = L.marker(
+                [37.25796515, 126.96435004],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_94b7f329af1149bd993c7e60ad681461 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "2", "textColor": "#00ABDC"}
+            )
+            marker_d395b2ca130f4b2f884c11d89d089519.setIcon(beautify_icon_94b7f329af1149bd993c7e60ad681461);
+        
+    
+            marker_d395b2ca130f4b2f884c11d89d089519.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">2.휴세스</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.795km</br>예상 소요 시간 :2분35초</font></strong></br>충전소 위치 구분 :기타</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 1개</br>AC완속 : 1개</br>주소 :경기도 수원시 권선구 호매실로166번길 130</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9b99638884074ae39a5426dee26a5bf0 = L.marker(
+                [37.2579784, 126.9647661],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_d70ffd528b60446cae352616de49e4c7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "3", "textColor": "#DC0000"}
+            )
+            marker_9b99638884074ae39a5426dee26a5bf0.setIcon(beautify_icon_d70ffd528b60446cae352616de49e4c7);
+        
+    
+            marker_9b99638884074ae39a5426dee26a5bf0.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">3.수원 중앙식자재마트</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.799km</br>예상 소요 시간 :2분38초</font></strong></br>충전소 위치 구분 :마트(쇼핑몰)</br>충전소 상세 위치:4층 주차장</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>AC완속 : 2개</br>주소 :경기도 수원시 권선구 서수원로 345</br><font style="color:red" size="4"> 사용불가 </font>  시설 상황에 따라 이용이 제한될 수 있음
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c02a2f4f17a149caab7334df95d3f5a2 = L.marker(
+                [37.257909772, 126.96074991],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_c9ec01f39cdd4675aa4acc173b140650 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "4", "textColor": "#DC0000"}
+            )
+            marker_c02a2f4f17a149caab7334df95d3f5a2.setIcon(beautify_icon_c9ec01f39cdd4675aa4acc173b140650);
+        
+    
+            marker_c02a2f4f17a149caab7334df95d3f5a2.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">4.호매실엔루체 입주자대표회의</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.421km</br>예상 소요 시간 :1분50초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 5개</br>AC완속 : 5개</br>주소 :경기도 수원시 권선구 호매실로166번길 70</br><font style="color:red" size="4"> 사용불가 </font>  거주자외 출입제한
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_62b75cbafa4e437f87333bffde54c8f0 = L.marker(
+                [37.2579075965, 126.9692391402],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_8389e13f865f41939e042a35233d7cf7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "5", "textColor": "#00ABDC"}
+            )
+            marker_62b75cbafa4e437f87333bffde54c8f0.setIcon(beautify_icon_8389e13f865f41939e042a35233d7cf7);
+        
+    
+            marker_62b75cbafa4e437f87333bffde54c8f0.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">5.서수원지사</font></strong> (이용시간 : 주중/주말 : 06시~23시)</br><strong><font style="color:blue" size="2">목적지 거리 :1.424km</br>예상 소요 시간 :3분47초</font></strong></br>충전소 위치 구분 :공공기관</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 6개</br>AC완속 : 4개</br>DC차데모+AC3상+DC콤보 : 2개</br>주소 :경기도 수원시 권선구 호매실로 46-82</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6dfa06de89b84ce5b5bc4bd8a65e281e = L.marker(
+                [37.258274721, 126.97009966],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_1592de37386a4d73883ee88934d43b2c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "6", "textColor": "#DC0000"}
+            )
+            marker_6dfa06de89b84ce5b5bc4bd8a65e281e.setIcon(beautify_icon_1592de37386a4d73883ee88934d43b2c);
+        
+    
+            marker_6dfa06de89b84ce5b5bc4bd8a65e281e.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">6.서수원우체국</font></strong> (이용시간 : 09:00~18:00)</br><strong><font style="color:blue" size="2">목적지 거리 :1.28km</br>예상 소요 시간 :3분8초</font></strong></br>충전소 위치 구분 :관공서</br>충전소 상세 위치:</br>주차장 이용 :주차 유료 및 제한</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 호매실로 22-55</br><font style="color:red" size="4"> 사용불가 </font>  해당 시설 정책에 따라 이용이 불가할 수 있습니다
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_866c0db828b04db894d86dd57fbbc598 = L.marker(
+                [37.254957462, 126.96144818],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_b361398014c946c18bd235068a473643 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "7", "textColor": "#00ABDC"}
+            )
+            marker_866c0db828b04db894d86dd57fbbc598.setIcon(beautify_icon_b361398014c946c18bd235068a473643);
+        
+    
+            marker_866c0db828b04db894d86dd57fbbc598.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">7.경기수원 능실마을21단지2</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.74km</br>예상 소요 시간 :1분53초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:2104동 지하1층</br>주차장 이용 :주차 무료</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 호매실로 103</br><font style="color:green" size="4"> 사용가능 </font> 외부인 사용불가
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87181cf2774c463fbc133c5bb45bcc4c = L.marker(
+                [37.254957462, 126.96144818],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_dbec36abdf7f4ff09aa055d2c25c4cfc = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "8", "textColor": "#00ABDC"}
+            )
+            marker_87181cf2774c463fbc133c5bb45bcc4c.setIcon(beautify_icon_dbec36abdf7f4ff09aa055d2c25c4cfc);
+        
+    
+            marker_87181cf2774c463fbc133c5bb45bcc4c.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">8.경기수원 능실마을21단지3</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.74km</br>예상 소요 시간 :1분53초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:2108동 지하1층</br>주차장 이용 :주차 무료</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 호매실로 103</br><font style="color:green" size="4"> 사용가능 </font> 외부인 사용불가
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_80bc505034534d0bb055d24a5fa806bc = L.marker(
+                [37.263168732, 126.95668682],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_99bab2093b004d558b04388c58fbb3f9 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "9", "textColor": "#00ABDC"}
+            )
+            marker_80bc505034534d0bb055d24a5fa806bc.setIcon(beautify_icon_99bab2093b004d558b04388c58fbb3f9);
+        
+    
+            marker_80bc505034534d0bb055d24a5fa806bc.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">9.호매실장애인종합복지관</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :1.842km</br>예상 소요 시간 :7분38초</font></strong></br>충전소 위치 구분 :복지관</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>DC콤보 : 2개</br>주소 :경기도 수원시 권선구 호매실로 211</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4f79e9b7f71f446fb8fe8f1807e29fe1 = L.marker(
+                [37.25706, 126.971317],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_f4949f81b6224c74a008f17580fa17f6 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "10", "textColor": "#00ABDC"}
+            )
+            marker_4f79e9b7f71f446fb8fe8f1807e29fe1.setIcon(beautify_icon_f4949f81b6224c74a008f17580fa17f6);
+        
+    
+            marker_4f79e9b7f71f446fb8fe8f1807e29fe1.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">10.권선구청</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :1.374km</br>예상 소요 시간 :3분10초</font></strong></br>충전소 위치 구분 :관공서</br>충전소 상세 위치:구청 주차장 (후문측)(구청내 기업은행쪽)</br>주차장 이용 :주차 유료 및 제한</br>충전기 총 3개</br>DC콤보 : 2개</br>DC차데모+DC콤보 : 1개</br>주소 :경기도 수원시 권선구 호매실로 12</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2cec8a75b0f64cd2909c880571d24bfe = L.marker(
+                [37.2586001, 126.9722286],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_829ce950bf06446e81bedea4aacbed6f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "11", "textColor": "#00ABDC"}
+            )
+            marker_2cec8a75b0f64cd2909c880571d24bfe.setIcon(beautify_icon_829ce950bf06446e81bedea4aacbed6f);
+        
+    
+            marker_2cec8a75b0f64cd2909c880571d24bfe.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">11.수원서부경찰서</font></strong> (이용시간 : 09:00~18:00)</br><strong><font style="color:blue" size="2">목적지 거리 :1.563km</br>예상 소요 시간 :5분30초</font></strong></br>충전소 위치 구분 :경찰서</br>충전소 상세 위치:용우각건물 쪽(종합민원봉사실 부근)</br>주차장 이용 :주차 무료</br>충전기 총 1개</br>DC차데모+AC3상+DC콤보 : 1개</br>주소 :경기도 수원시 권선구 서부로</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea3caef47a094ea194bb30eedb04069e = L.marker(
+                [37.2595285133, 126.9549759949],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_0028988e15f64815919da893d4da4eb1 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "12", "textColor": "#00ABDC"}
+            )
+            marker_ea3caef47a094ea194bb30eedb04069e.setIcon(beautify_icon_0028988e15f64815919da893d4da4eb1);
+        
+    
+            marker_ea3caef47a094ea194bb30eedb04069e.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">12.호매실 휴먼시아 16단지</font></strong> (이용시간 : 24시간 이용가능,입주민만 사용가능 거주자외출입제한)</br><strong><font style="color:blue" size="2">목적지 거리 :1.225km</br>예상 소요 시간 :5분4초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>AC완속 : 2개</br>주소 :경기도 수원시 권선구 호매실로165번길 30 (호매실동, 수원호매실휴먼시아16단지아파트)</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8431da236b548ad9281cfb331abd598 = L.marker(
+                [37.252705444, 126.96330727],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_ac49389d6cff4ad2b9cbf609fc32d6ea = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "13", "textColor": "#DC0000"}
+            )
+            marker_a8431da236b548ad9281cfb331abd598.setIcon(beautify_icon_ac49389d6cff4ad2b9cbf609fc32d6ea);
+        
+    
+            marker_a8431da236b548ad9281cfb331abd598.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">13.수원여자대학인제캠퍼스</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :1.041km</br>예상 소요 시간 :2분35초</font></strong></br>충전소 위치 구분 :학교</br>충전소 상세 위치:지하주차장</br>주차장 이용 :주차 무료</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 온정로 72</br><font style="color:red" size="4"> 사용불가 </font>  사용 승인 대기중
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a47df0a48514cd49a8808bd16a0b2b7 = L.marker(
+                [37.256717, 126.972238],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_a1761b8c08df46e28f3bba9fcb539afa = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "14", "textColor": "#00ABDC"}
+            )
+            marker_8a47df0a48514cd49a8808bd16a0b2b7.setIcon(beautify_icon_a1761b8c08df46e28f3bba9fcb539afa);
+        
+    
+            marker_8a47df0a48514cd49a8808bd16a0b2b7.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">14.권선구청</font></strong> (이용시간 : 평일 09시~18시)</br><strong><font style="color:blue" size="2">목적지 거리 :1.494km</br>예상 소요 시간 :4분10초</font></strong></br>충전소 위치 구분 :관공서</br>충전소 상세 위치:</br>주차장 이용 :주차 유료 및 제한</br>충전기 총 2개</br>AC완속 : 2개</br>주소 :경기도 수원시 권선구 호매실로 12 (탑동, 권선구청)</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61d09c5a28c948b18b2dccc2c3279834 = L.marker(
+                [37.252734, 126.962319],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_782e8346539944d3ae23d2808cfd410a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "15", "textColor": "#00ABDC"}
+            )
+            marker_61d09c5a28c948b18b2dccc2c3279834.setIcon(beautify_icon_782e8346539944d3ae23d2808cfd410a);
+        
+    
+            marker_61d09c5a28c948b18b2dccc2c3279834.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">15.수원여자대학교 인제캠퍼스</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :0.937km</br>예상 소요 시간 :2분11초</font></strong></br>충전소 위치 구분 :학교</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>AC완속 : 1개</br>DC차데모+AC3상+DC콤보 : 1개</br>주소 :경기도 수원시 권선구 온정로 72</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_152c615cece44f24a0f41ab652ec6605 = L.marker(
+                [37.2664124, 126.9579291],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_b63c86ddf9b7471ca186c1ddcf3db531 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "16", "textColor": "#00ABDC"}
+            )
+            marker_152c615cece44f24a0f41ab652ec6605.setIcon(beautify_icon_b63c86ddf9b7471ca186c1ddcf3db531);
+        
+    
+            marker_152c615cece44f24a0f41ab652ec6605.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">16.호매실도서관</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :1.521km</br>예상 소요 시간 :7분29초</font></strong></br>충전소 위치 구분 :지자체시설</br>충전소 상세 위치:주차장 진입 후 우측 끝부분</br>주차장 이용 :주차 유료 및 제한</br>충전기 총 1개</br>DC콤보 : 1개</br>주소 :경기도 수원시 권선구 칠보로 169</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fcafb7e4ff7f468daaa86f7e81cb11e6 = L.marker(
+                [37.2537863, 126.9576903],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_d5283f8fd3bb400294d3d1fc0e82228f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "17", "textColor": "#00ABDC"}
+            )
+            marker_fcafb7e4ff7f468daaa86f7e81cb11e6.setIcon(beautify_icon_d5283f8fd3bb400294d3d1fc0e82228f);
+        
+    
+            marker_fcafb7e4ff7f468daaa86f7e81cb11e6.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">17.경기수원 능실마을21단지1</font></strong> (이용시간 : 24시간 이용가능,입주민만 사용가능 거주자외출입제한)</br><strong><font style="color:blue" size="2">목적지 거리 :0.74km</br>예상 소요 시간 :1분53초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:2106동 지하1층3~4라인 C34기둥</br>주차장 이용 :주차 무료</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 호매실로 103</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9204711b3ddd4c53a04bd6d6af5355f0 = L.marker(
+                [37.2662294328, 126.957046405],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_f5bf68a379d643a4a5f5b11a74c6ee84 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "18", "textColor": "#00ABDC"}
+            )
+            marker_9204711b3ddd4c53a04bd6d6af5355f0.setIcon(beautify_icon_f5bf68a379d643a4a5f5b11a74c6ee84);
+        
+    
+            marker_9204711b3ddd4c53a04bd6d6af5355f0.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">18.수원시 호매실동 행정복지센터</font></strong> (이용시간 : 24시간)</br><strong><font style="color:blue" size="2">목적지 거리 :1.562km</br>예상 소요 시간 :7분39초</font></strong></br>충전소 위치 구분 :주민센터</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 1개</br>AC완속 : 1개</br>주소 :경기도 수원시 권선구 칠보로 161 </br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_54574678c4a34b99a534116b78498e37 = L.marker(
+                [37.266802546, 126.95718858],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_c098d959931a43f5aab9b87002cbf12f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "19", "textColor": "#00ABDC"}
+            )
+            marker_54574678c4a34b99a534116b78498e37.setIcon(beautify_icon_c098d959931a43f5aab9b87002cbf12f);
+        
+    
+            marker_54574678c4a34b99a534116b78498e37.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">19.수원 진로마트 호매실점 급속충전소</font></strong> (이용시간 : 24시간 이용가능/시설 상황에 따라 이용이 제한될 수)</br><strong><font style="color:blue" size="2">목적지 거리 :1.605km</br>예상 소요 시간 :7분49초</font></strong></br>충전소 위치 구분 :마트(쇼핑몰)</br>충전소 상세 위치:지상3층 주차장</br>주차장 이용 :주차 유료 및 제한</br>충전기 총 2개</br>DC콤보 : 2개</br>주소 :경기도 수원시 권선구 칠보로159번길 26</br><font style="color:green" size="4"> 사용가능 </font> 시설 상황에 따라 이용이 제한될 수 있음
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e761aead2a584ac6be85f4de1a809da3 = L.marker(
+                [37.26832757, 126.9584703],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_3601f8eaa6834e52b0a6b9e99730dd72 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "20", "textColor": "#DC0000"}
+            )
+            marker_e761aead2a584ac6be85f4de1a809da3.setIcon(beautify_icon_3601f8eaa6834e52b0a6b9e99730dd72);
+        
+    
+            marker_e761aead2a584ac6be85f4de1a809da3.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">20.수원시 호매실GS아파트</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :1.747km</br>예상 소요 시간 :6분49초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 9개</br>AC완속 : 9개</br>주소 :경기도 수원시 권선구 매실로 70</br><font style="color:red" size="4"> 사용불가 </font>  거주자외 출입제한
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c166e88f9a04564a933fede5437febe = L.marker(
+                [37.2601436591, 126.9520040656],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_4dedb44a6dbf478c94f9a57ed360bf6c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "21", "textColor": "#00ABDC"}
+            )
+            marker_4c166e88f9a04564a933fede5437febe.setIcon(beautify_icon_4dedb44a6dbf478c94f9a57ed360bf6c);
+        
+    
+            marker_4c166e88f9a04564a933fede5437febe.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">21.호매실 휴먼시아 15단지</font></strong> (이용시간 : 24시간 이용가능,입주민만 사용가능 거주자외출입제한)</br><strong><font style="color:blue" size="2">목적지 거리 :1.27km</br>예상 소요 시간 :5분17초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 5개</br>AC완속 : 5개</br>주소 :경기도 수원시 권선구 호매실로165번길 70 (호매실동, 수원호매실휴먼시아15단지아파트)</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d2617875844c4af4901f0a36ade65e23 = L.marker(
+                [37.268928167, 126.95786958],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_8f1519949f2844fcab43418ed790baea = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "22", "textColor": "#00ABDC"}
+            )
+            marker_d2617875844c4af4901f0a36ade65e23.setIcon(beautify_icon_8f1519949f2844fcab43418ed790baea);
+        
+    
+            marker_d2617875844c4af4901f0a36ade65e23.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">22.수원시 삼익2차아파트</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :1.983km</br>예상 소요 시간 :7분22초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:B1,B2</br>주차장 이용 :주차 무료</br>충전기 총 7개</br>AC완속 : 7개</br>주소 :경기도 수원시 권선구 매실로 61</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f2dcd8e0bc5427893c2d857fce3a070 = L.marker(
+                [37.269327071, 126.95679707],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_22ba9a340f5a40da8fb685fc1995eb98 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "23", "textColor": "#00ABDC"}
+            )
+            marker_2f2dcd8e0bc5427893c2d857fce3a070.setIcon(beautify_icon_22ba9a340f5a40da8fb685fc1995eb98);
+        
+    
+            marker_2f2dcd8e0bc5427893c2d857fce3a070.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">23.금곡삼익1차아파트</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :2.148km</br>예상 소요 시간 :8분7초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 7개</br>AC완속 : 7개</br>주소 :경기도 수원시 권선구 금호로 45</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1d5d04991454bc6a2136629f0ab050e = L.marker(
+                [37.267845, 126.974309],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_6040b602aba64ee48cb20bf94b286d6c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "24", "textColor": "#DC0000"}
+            )
+            marker_c1d5d04991454bc6a2136629f0ab050e.setIcon(beautify_icon_6040b602aba64ee48cb20bf94b286d6c);
+        
+    
+            marker_c1d5d04991454bc6a2136629f0ab050e.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">24.수원탑동우방파크타운</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :2.568km</br>예상 소요 시간 :8분4초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>AC완속 : 2개</br>주소 :경기도 수원시 권선구 효탑로 50</br><font style="color:red" size="4"> 사용불가 </font>  거주자외 출입제한
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52e4f4b93f3f418fa7c6f1fb0b8b966e = L.marker(
+                [37.2657949, 126.9504304],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_b8741742a76c443cba1db28abf8cf363 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "25", "textColor": "#DC0000"}
+            )
+            marker_52e4f4b93f3f418fa7c6f1fb0b8b966e.setIcon(beautify_icon_b8741742a76c443cba1db28abf8cf363);
+        
+    
+            marker_52e4f4b93f3f418fa7c6f1fb0b8b966e.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">25.호매실한양수자인파크원입주자대표회의</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :2.294km</br>예상 소요 시간 :10분22초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:101동B1F 2대/102동B1F 좌1대,우1대/103동B1F 좌2대,우1대/104동B1 F우2대/105동B1F 우2대/106동B1F 3대/107동B1F 3대/108동B1F 2대/</br>주차장 이용 :주차 무료</br>충전기 총 35개</br>AC완속 : 35개</br>주소 :경기도 수원시 권선구 칠보로 102</br><font style="color:red" size="4"> 사용불가 </font>  거주자외 출입제한
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a40827b221e8403db46d53042408fac4 = L.marker(
+                [37.2681696, 126.9523783],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_3930dec781e84bfd83e853c92b80ec8b = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "26", "textColor": "#00ABDC"}
+            )
+            marker_a40827b221e8403db46d53042408fac4.setIcon(beautify_icon_3930dec781e84bfd83e853c92b80ec8b);
+        
+    
+            marker_a40827b221e8403db46d53042408fac4.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">26.수원호매실동쌍용</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :2.376km</br>예상 소요 시간 :9분8초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:.지하1층 42기둥 좌,우측</br>주차장 이용 :주차 무료</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 매실로19번길 19</br><font style="color:green" size="4"> 사용가능 </font> 거주자외 출입제한
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0849d194124048639199c0a993231e1a = L.marker(
+                [37.247724109683, 126.9633011288],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_8700b865574545509a2e03f3481fdbbb = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "27", "textColor": "#00ABDC"}
+            )
+            marker_0849d194124048639199c0a993231e1a.setIcon(beautify_icon_8700b865574545509a2e03f3481fdbbb);
+        
+    
+            marker_0849d194124048639199c0a993231e1a.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">27.경기수원 서희스타힐스107동</font></strong> (이용시간 : 24시간 이용가능,입주민만 사용가능 거주자외출입제한)</br><strong><font style="color:blue" size="2">목적지 거리 :1.75km</br>예상 소요 시간 :4분23초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:</br>주차장 이용 :주차 무료</br>충전기 총 3개</br>AC완속 : 3개</br>주소 :경기도 수원시 권선구 온정로9번길 36</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eaadeee20fc04431bd0ae20ec304b56d = L.marker(
+                [37.270351, 126.954654],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_8d79160d011c49a2968da1dd31c978b5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#DC0000", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "28", "textColor": "#DC0000"}
+            )
+            marker_eaadeee20fc04431bd0ae20ec304b56d.setIcon(beautify_icon_8d79160d011c49a2968da1dd31c978b5);
+        
+    
+            marker_eaadeee20fc04431bd0ae20ec304b56d.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">28.일신건영아파트</font></strong> (이용시간 : 주중/주말 : 00시~24시)</br><strong><font style="color:blue" size="2">목적지 거리 :2.492km</br>예상 소요 시간 :9분46초</font></strong></br>충전소 위치 구분 :아파트</br>충전소 상세 위치:101동 지하 1층 7-8라인 부근</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>AC완속 : 2개</br>주소 :경기도 수원시 권선구 매곡로 68</br><font style="color:red" size="4"> 사용불가 </font>  거주자외 출입제한
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c7331adc960344faa4a8a37bcb5c6553 = L.marker(
+                [37.2522297, 126.9761954],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_1a4d7433b09c4acd889e1ad41c84c6ea = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "29", "textColor": "#00ABDC"}
+            )
+            marker_c7331adc960344faa4a8a37bcb5c6553.setIcon(beautify_icon_1a4d7433b09c4acd889e1ad41c84c6ea);
+        
+    
+            marker_c7331adc960344faa4a8a37bcb5c6553.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">29.도로교통관리사업소</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :3.272km</br>예상 소요 시간 :7분45초</font></strong></br>충전소 위치 구분 :공공기관</br>충전소 상세 위치:주차장 진입 우측 주차면 화단(우측 끝 모서리 부근)</br>주차장 이용 :주차 무료</br>충전기 총 2개</br>DC콤보 : 2개</br>주소 :경기도 수원시 권선구 서부로 1600</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67c7703a115f4c24818045c5c7c42880 = L.marker(
+                [37.27131412, 126.9556278],
+                {}
+            ).addTo(marker_cluster_d1fee4044fae4953b959d39476e21e61);
+        
+    
+            var beautify_icon_33b9f4f0c1214cc8afae442c92b7a495 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "#00ABDC", "borderWidth": 3, "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": true, "spin": false, "text": "30", "textColor": "#00ABDC"}
+            )
+            marker_67c7703a115f4c24818045c5c7c42880.setIcon(beautify_icon_33b9f4f0c1214cc8afae442c92b7a495);
+        
+    
+            marker_67c7703a115f4c24818045c5c7c42880.bindTooltip(
+                `<div>
+                     <strong><font style="color:blue" size="4">30.수원 제일마켓호매실점</font></strong> (이용시간 : 24시간 이용가능)</br><strong><font style="color:blue" size="2">목적지 거리 :2.239km</br>예상 소요 시간 :9분17초</font></strong></br>충전소 위치 구분 :마트(쇼핑몰)</br>충전소 상세 위치:</br>주차장 이용 :주차 유료 및 제한</br>충전기 총 1개</br>AC완속 : 1개</br>주소 :경기도 수원시 권선구 매곡로 94-4</br><font style="color:green" size="4"> 사용가능 </font> 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
