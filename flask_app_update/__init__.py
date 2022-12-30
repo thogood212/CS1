@@ -108,7 +108,7 @@ def find_charger():
             makerDetail = module.make_marker(i, DB_result)
             lat = DB_result.loc[i,'lat']
             lng = DB_result.loc[i,'lng']
-            num = DB_result.loc[i,'key']
+            num = DB_result.loc[i,'index']
             name = DB_result.loc[i,'statNm']
             p= Point(latitude=lat, longitude=lng)
             usetime = DB_result.loc[i,'useTime']

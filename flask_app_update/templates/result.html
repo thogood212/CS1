@@ -225,7 +225,7 @@
               {% for table in tables %}
               <a href="#None" class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">{{table['key']}}. {{table['statNm']}}</h5>
+                  <h5 class="mb-1">{{table['index']}}. {{table['statNm']}}</h5>
                   <small>{{table['limitYn']}}</small>
                 </div>
                 <p class="mb-1">소요시간 : {{table['duration']//60}}분 {{table['duration']%60}}초</p> 

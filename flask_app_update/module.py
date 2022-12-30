@@ -47,6 +47,10 @@ def check_result(df):
         if df.loc[i,'result_msg'] == '길찾기 실패':
             df = df.drop(index=i, axis=0)
     df = df.sort_values(by=["limitYn",'duration'], ascending=[True, True])
+    df = df.reset_index(drop=True)
+    for i in range(len(df)):
+        df.loc[i,'index'] = int(i)+1
+    df['index'] = df['index'].apply(lambda x: int(x))
     df['location'] = df['location'].apply(lambda x: '' if x =='null' else x)
     df['key'] = df['key'].apply(lambda x : int(x)+1)
     return df
