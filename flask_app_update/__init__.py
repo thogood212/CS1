@@ -27,7 +27,7 @@ def geocording():
         #키워드를 통한 상세 주소 좌표 표기
         addr = request.form['address']
         url = f"http://dapi.kakao.com/v2/local/search/keyword"
-        header = {'Authorization': 'KakaoAK 318f960d88d8869efe28e323c646cad5', 
+        header = {'Authorization': 'KakaoAK {APIkey입력}', 
                 "Content-Type" : "application/json"}
 
         queryString = {'query' : addr}
@@ -77,7 +77,7 @@ def find_charger():
         url = "https://apis-navi.kakaomobility.com/v1/destinations/directions"
 
         #다중 목적지 카카오내비 api
-        header = {'Authorization': 'KakaoAK 318f960d88d8869efe28e323c646cad5', "Content-Type" : "application/json"}
+        header = {'Authorization': 'KakaoAK {APIkey입력}', "Content-Type" : "application/json"}
 
         destination = module.make_dest(p_departure,DB_result)
         response = requests.post(url, headers=header, json=destination)
